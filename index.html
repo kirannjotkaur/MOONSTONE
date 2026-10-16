@@ -1,0 +1,155 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moonstore — Read More. Dream Bigger.</title>
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#0b0a12;color:#f4efff;font-family:'DM Sans',sans-serif}
+nav{height:80px;display:flex;justify-content:space-between;align-items:center;padding:0 8%;border-bottom:1px solid #ffffff12}
+.logo{font:700 32px 'Kalam',cursive;color:#f4efff;text-decoration:none}
+.logo span{color:#b29aff}
+nav a{color:#bcb5ce;text-decoration:none;margin-left:25px;font-size:14px}
+nav a:hover{color:#d9f28b}
+.hero{min-height:600px;display:flex;align-items:center;justify-content:space-between;padding:70px 10%;gap:50px}
+.eyebrow{color:#b29aff;text-transform:uppercase;letter-spacing:3px;font-size:11px}
+h1{font:400 clamp(48px,7vw,85px)/1.12 'Kalam',cursive;margin:25px 0}
+h1 em{color:#b29aff;font-style:normal}
+.hero p{color:#aaa4ba;line-height:1.9;max-width:480px;font-size:15px}
+.buttons{display:flex;gap:15px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:14px 22px;border-radius:4px;text-decoration:none;font-size:13px;font-weight:bold;transition:.25s}
+.primary{background:#b29aff;color:#171329}
+.secondary{border:1px solid #ffffff25;color:#f4efff}
+.btn:hover{transform:translateY(-3px)}
+.art{width:310px;height:350px;position:relative;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.moon{position:absolute;width:115px;height:115px;border-radius:50%;background:#e4dcff;top:0;right:0;box-shadow:0 0 70px #b29aff55}
+.moon:after{content:"";position:absolute;top:-10px;left:28px;width:110px;height:110px;border-radius:50%;background:#0b0a12}
+.cover{position:absolute;width:190px;height:255px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;font:26px 'Kalam',cursive;box-shadow:12px 15px 30px #0008;border-radius:3px}
+.cover small{font:9px 'DM Sans',sans-serif;letter-spacing:2px}
+.cover.one{background:#d9f28b;color:#1c1b18;transform:rotate(-9deg) translate(-28px,35px)}
+.cover.two{background:#66518c;color:white;transform:rotate(8deg) translate(38px,35px)}
+.cover.three{background:#171329;border:1px solid #b29aff;color:#f4efff;transform:rotate(-2deg) translate(0,30px)}
+section.books{padding:90px 8%;background:#100e18}
+.heading{text-align:center;margin-bottom:45px}
+.heading h2{font:400 clamp(38px,5vw,58px) 'Kalam',cursive;margin:10px 0}
+.heading h2 em{color:#b29aff;font-style:normal}
+.heading p{color:#aaa4ba;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:#151220;border:1px solid #ffffff10;padding:15px;border-radius:5px;transition:.3s}
+.card:hover{transform:translateY(-7px);border-color:#b29aff70}
+.book-cover{height:245px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;font:27px 'Kalam',cursive}
+.book-cover small{font:9px 'DM Sans',sans-serif;letter-spacing:1px}
+.c1{background:#cbdc98;color:#20221a}.c2{background:#47386c;color:#fff}.c3{background:#d9c9f4;color:#241735}.c4{background:#252d37;color:#f4efff}
+.card h3{font-size:15px;margin:18px 0 7px}
+.card p{font-size:12px;line-height:1.8;color:#aaa4ba;min-height:65px}
+.price{display:flex;justify-content:space-between;align-items:center;margin-top:18px;font-size:14px}
+.price strong{color:#d9f28b;font-size:17px}
+.bundle{margin:80px 8%;padding:55px;background:#171329;border:1px solid #b29aff30;display:flex;justify-content:space-between;align-items:center;gap:30px}
+.bundle h2{font:400 clamp(36px,5vw,60px)/1.2 'Kalam',cursive;margin:15px 0}
+.bundle h2 em{color:#b29aff;font-style:normal}
+.bundle p{font-size:13px;color:#aaa4ba;line-height:1.8;max-width:460px}
+.bundle-price{font-size:48px;color:#d9f28b;font-weight:bold;margin:15px 0}
+.bundle-price del{font-size:20px;color:#777087;margin-right:12px}
+footer{padding:35px 8%;border-top:1px solid #ffffff12;display:flex;justify-content:space-between;align-items:center;gap:20px;color:#827b95;font-size:12px}
+footer .logo{font-size:25px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero{padding:65px 7%}.art{transform:scale(.85)}.bundle{margin:55px 5%;padding:35px}}
+@media(max-width:600px){nav{padding:0 5%;height:70px}nav a{margin-left:12px;font-size:12px}.hero{flex-direction:column;align-items:flex-start;padding:65px 7% 30px;gap:0}.hero h1{font-size:58px}.art{align-self:center;margin:25px 0;transform:scale(.85)}.grid{grid-template-columns:1fr 1fr;gap:12px}.book-cover{height:190px;padding:12px;font-size:21px}.card{padding:10px}.card h3{font-size:13px}.card p{font-size:11px;min-height:90px}.bundle{flex-direction:column;align-items:flex-start;padding:28px 22px;margin:45px 5%}.bundle-price{font-size:40px}footer{flex-direction:column;align-items:flex-start}}
+@media(max-width:360px){nav a{margin-left:7px;font-size:11px}.grid{grid-template-columns:1fr}.book-cover{height:260px}.card p{min-height:0}}
+</style>
+</head>
+<body>
+
+<nav>
+<a class="logo" href="#">☾ moonstore<span>.</span></a>
+<div>
+<a href="#home">Home</a>
+<a href="#books">Books</a>
+<a href="#bundle">Bundle</a>
+</div>
+</nav>
+
+<header class="hero" id="home">
+<div>
+<div class="eyebrow">✦ For the dreamers and doers</div>
+<h1>Your next chapter<br>starts <em>tonight.</em></h1>
+<p>Small books for big ambitions. Discover fresh perspectives on studying smarter, building discipline, managing money, and creating your own opportunities.</p>
+<div class="buttons">
+<a class="btn primary" href="#books">Explore the collection ↗</a>
+<a class="btn secondary" href="#bundle">Discover the bundle →</a>
+</div>
+</div>
+<div class="art">
+<div class="moon"></div>
+<div class="cover one"><small>MOONSTORE EDITION</small>MAKE SPACE<br>FOR GROWTH<small>VOL. 02</small></div>
+<div class="cover two"><small>YOUR NEXT CHAPTER</small>THINK<br>BEYOND<br>TODAY<small>READ · DREAM · BUILD</small></div>
+<div class="cover three"><small>THE NIGHT EDITION</small>☾<br>YOUR<br>FUTURE<br>BEGINS<small>MOONSTORE</small></div>
+</div>
+</header>
+
+<section class="books" id="books">
+<div class="heading">
+<div class="eyebrow">THE MOONSTORE LIBRARY</div>
+<h2>Four reads. <em>Fresh starts.</em></h2>
+<p>Practical ideas for the person you're becoming.</p>
+</div>
+<div class="grid">
+
+<div class="card">
+<div class="book-cover c1"><small>01 / STUDENT EDITION</small>THE STUDENT<br>COMEBACK<small>START AGAIN. STRONGER.</small></div>
+<h3>The Student Comeback</h3>
+<p>Motivation, study recovery, discipline, and rebuilding your confidence.</p>
+<div class="price"><span>Digital edition</span><strong>₹49</strong></div>
+</div>
+
+<div class="card">
+<div class="book-cover c2"><small>02 / MONEY EDITION</small>MONEY<br>&amp; STUDY<small>PLAN YOUR NEXT MOVE.</small></div>
+<h3>Money &amp; Study</h3>
+<p>Student budgeting, financial literacy, and smarter study planning.</p>
+<div class="price"><span>Digital edition</span><strong>₹49</strong></div>
+</div>
+
+<div class="card">
+<div class="book-cover c3"><small>03 / BUILDER EDITION</small>STUDENT<br>ENTREPRENEURS<small>START SMALL. THINK BIG.</small></div>
+<h3>Student Entrepreneurs</h3>
+<p>Business ideas, side hustles, and starting something of your own.</p>
+<div class="price"><span>Digital edition</span><strong>₹49</strong></div>
+</div>
+
+<div class="card">
+<div class="book-cover c4"><small>04 / HABITS EDITION</small>DISCIPLINE<br>THAT LASTS<small>SHOW UP FOR YOURSELF.</small></div>
+<h3>Discipline That Lasts</h3>
+<p>Habits, focus, consistency, and overcoming procrastination.</p>
+<div class="price"><span>Digital edition</span><strong>₹49</strong></div>
+</div>
+
+</div>
+</section>
+
+<section class="bundle" id="bundle">
+<div>
+<div class="eyebrow">✦ THE COMPLETE COLLECTION</div>
+<h2>Four books.<br><em>One bigger future.</em></h2>
+<p>Build your mindset, understand your money, explore entrepreneurship, and develop lasting discipline with the complete Moonstore collection.</p>
+<div class="bundle-price"><del>₹196</del> ₹99</div>
+<p>All four e-books together. Save ₹97 compared with buying them individually.</p>
+<div class="buttons"><a class="btn primary" href="#books">Explore all four books ↗</a></div>
+</div>
+<div class="art">
+<div class="cover one"><small>01</small>STUDENT<br>COMEBACK</div>
+<div class="cover two"><small>02</small>MONEY<br>&amp; STUDY</div>
+<div class="cover three"><small>MOONSTORE COLLECTION</small>FOUR BOOKS<br>FOUR NEW<br>BEGINNINGS<small>THE COMPLETE EDITION</small></div>
+</div>
+</section>
+
+<footer>
+<div><a class="logo" href="#">☾ moonstore<span>.</span></a><p>Read more. Dream bigger.</p></div>
+<div>Made for your next chapter. ✦</div>
+</footer>
+
+</body>
+</html>
+```
